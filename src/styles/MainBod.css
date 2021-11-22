@@ -41,6 +41,32 @@ input {
     border-radius: 15px; 
 }
 
+.searchButton2 {
+    margin: 5px; 
+    margin-top: 20px; 
+    background-color: #92B1B6; 
+    font-size: 16px;
+    border: 2px solid #35455D; 
+    border-radius: 15px; 
+}
+
+.explain {
+    font-size:14px; 
+    color: #F1C5AE;
+    margin-right: 10px; 
+    margin-top: 7px; 
+}
+
+.subDiv {
+    display: flex; 
+    justify-content: space-between;
+}
+
+.back {
+    display: flex; 
+    justify-content: center;
+}
+
 .searchTitle {
     margin-top: 20px; 
     font-size: 25px;
@@ -133,6 +159,7 @@ a:visited{
     font-size: 18px;
     color: #92B1B6; 
     font-weight: 800;
+    margin-left: 5px; 
 }
 
 .podSub {
@@ -142,6 +169,7 @@ a:visited{
     font-weight: 600;
     padding: 5px; 
     margin-bottom: 30px;
+    margin-left: 5px; 
 }
 
 .podList a {

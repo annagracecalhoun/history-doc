@@ -4,8 +4,6 @@ import MainBod from "./Components/MainBod.js";
 // import supporting packages 
 // import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom"; 
 // import axios from "axios"
-import logo from './logo.svg';
-import './App.css';
 
 function App() {
   return (

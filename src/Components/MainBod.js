@@ -65,6 +65,10 @@ function MainBod() {
      });
     }
 
+    const goBack = () => {
+        setsearchVal(""); 
+    }
+
     const sortByDate = (a, b) => {
         var months = ["January", "February", "March", "April", "May", "June",
         "July", "August", "September", "October", "November", "December"];
@@ -95,7 +99,10 @@ function MainBod() {
             <Router>
             <div className="mainHead">
             <div className="pageTitle">Mr.Worldwide</div>
+            <div className="subDiv">
             <span className="subtitle">Global Events Tracking.</span>
+            <span className="explain">Keep track of foreign affairs by building timelines of events. View events organized in sequential order and search for keywords to find trends across different timelines.</span>
+            </div>
             <div className="searchBar">
             <input placeholder="search for a keyword" type="text" value={searchVal} onChange={changesearchVal}></input>
             <button className="searchButton" onClick={getSearchRes}><Link to="/searchRes">Search</Link></button>
@@ -103,6 +110,9 @@ function MainBod() {
             </div>
             <Switch>
                 <Route exact path="/searchRes">
+                    <div className="back">
+                    <button className="searchButton2" onClick={goBack}><Link to="/">Go Back to Timelines</Link></button>
+                    </div>
                     <div className="searchTitle">Search Results for: {searchVal}</div>
                     <div className="searchEvents"> 
                     {searchRes.map((x, i) => 
