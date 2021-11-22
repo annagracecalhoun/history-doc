@@ -1,17 +1,12 @@
-import React, {useState, useEffect} from "react"; 
+import React from "react"; 
 import "../styles/Event.css";
 //import firestore from "../firebase";
 //import {collection} from "firebase/firestore/lite";
 
 function Event(props) {
     // create states for all event info 
-    const [title, setTitle] = useState(props.title); 
-    const [content, setContent] = useState(props.content);
-    const [source, setSource] = useState(props.source);
-    const [date, setDate] = useState(props.date); 
-    const [tags, setTags] = useState(props.tags);
-    const [sourceText, setSourceText] = useState(props.sourceText);
-    const [timeline, setTimeline] = useState(props.timeline);
+    const tags = props.tags; 
+
     // make tags into an array and then create bubble for each one  
     const allTags = tags.split(', ')
 

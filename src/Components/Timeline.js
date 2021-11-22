@@ -9,7 +9,6 @@ function Timeline(props) {
 
     // set state for all elements of timeline
     const [eventArr, seteventArr] = useState([]); 
-    const [title, setTitle] = useState(props.title);
     const [showNew, setshowNew] = useState(false);
 
     // new event fields 
@@ -20,6 +19,8 @@ function Timeline(props) {
     const [newTags, setNewTags] = useState("");
     const [newSourceText, setNewSourceText] = useState("");
     const [newTimeline, setNewTimeline] = useState("");
+
+    console.log(newTimeline);
 
     const changeTitle = (e) => {
         setNewTitle(e.target.value); 
@@ -59,7 +60,7 @@ function Timeline(props) {
             seteventArr(tempEvents.sort(sortByDate))        // set initial state of eventArr
             // eventArr.sort(sortByDate);
             }); 
-        }, []); 
+        }, [props.timeId]); 
 
 
     const createEvent = () => {
